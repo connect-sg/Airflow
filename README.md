@@ -56,3 +56,25 @@ Architectures -
 
 How it works?
 Add DAG -> FOlder DAG <---PARSER---> Scheduler -> metadata <-----DAG RUN, TASK INSTANCE-----> update-> Executor
+
+
+Docker - 
+1. It packages all the components of application, It ensures that application runs anywhere, anytime and exactly as intended.
+
+
+Setup airflow locally - 
+1. Install Docker
+2. Install VS code
+3. Create a folder for example materials and add file docker-compose.yaml
+4. Create a file .env within material
+5. run command - docker-compose up -d
+
+
+# configuration file 
+docker cp materials-airflow-scheduler-1:/opt/airflow/airflow.cfg .
+
+# stop and restart airlfow 
+docker-compose down && docker-compose --profile flower up -d
+
+# Flower dashboard
+localhost:5555/dashboard

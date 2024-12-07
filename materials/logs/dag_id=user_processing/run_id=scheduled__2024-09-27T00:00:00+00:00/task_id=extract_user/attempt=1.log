@@ -1,0 +1,26 @@
+[2024-09-28T00:22:12.537+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2024-09-27T00:00:00+00:00 [queued]>
+[2024-09-28T00:22:12.818+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2024-09-27T00:00:00+00:00 [queued]>
+[2024-09-28T00:22:12.859+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-28T00:22:12.873+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2024-09-28T00:22:12.886+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-28T00:22:13.194+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2024-09-27 00:00:00+00:00
+[2024-09-28T00:22:13.234+0000] {standard_task_runner.py:55} INFO - Started process 5538 to run task
+[2024-09-28T00:22:13.365+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'scheduled__2024-09-27T00:00:00+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmprnnjypyz']
+[2024-09-28T00:22:13.398+0000] {standard_task_runner.py:83} INFO - Job 54: Subtask extract_user
+[2024-09-28T00:22:14.835+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user scheduled__2024-09-27T00:00:00+00:00 [running]> on host 7c70f6053b6c
+[2024-09-28T00:22:16.059+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2024-09-27T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-09-27T00:00:00+00:00
+[2024-09-28T00:22:16.068+0000] {http.py:121} INFO - Calling HTTP method
+[2024-09-28T00:22:16.195+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2024-09-28T00:22:16.239+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2024-09-28T00:22:16.849+0000] {http.py:125} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Sieghard","last":"Richert"},"location":{"street":{"number":4962,"name":"Lerchenweg"},"city":"Oschersleben (Bode)","state":"Brandenburg","country":"Germany","postcode":36102,"coordinates":{"latitude":"-51.1964","longitude":"-74.0331"},"timezone":{"offset":"+8:00","description":"Beijing, Perth, Singapore, Hong Kong"}},"email":"sieghard.richert@example.com","login":{"uuid":"dbd79a34-1181-40b2-a997-baed9e55881b","username":"organicladybug763","password":"moonligh","salt":"eeGhbRk5","md5":"2738bd11360cbea52aa4d3d4fe12763e","sha1":"2250032a8b156975b48eec48bf73da170d3d4ccf","sha256":"80be120b0ab9c50be1cf4273575c3e15b6c460bc3b5d0bd1d58b5db8d5085a90"},"dob":{"date":"1982-06-04T06:16:39.227Z","age":42},"registered":{"date":"2020-11-26T16:36:10.779Z","age":3},"phone":"0693-3550780","cell":"0172-5082053","id":{"name":"SVNR","value":"49 040682 R 389"},"picture":{"large":"https://randomuser.me/api/portraits/men/87.jpg","medium":"https://randomuser.me/api/portraits/med/men/87.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/87.jpg"},"nat":"DE"}],"info":{"seed":"6ded6bcadb41d1cb","results":1,"page":1,"version":"1.4"}}
+[2024-09-28T00:22:17.215+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20240927T000000, start_date=20240928T002212, end_date=20240928T002217
+[2024-09-28T00:22:17.540+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2024-09-28T00:22:18.119+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
